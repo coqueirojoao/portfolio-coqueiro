@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import * as nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   try {
@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     // 2. Gerar uma "Senha de app" em https://myaccount.google.com/apppasswords
     // 3. Criar um arquivo .env.local com as variáveis SMTP_USER e SMTP_PASS
 
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: process.env.SMTP_USER,
