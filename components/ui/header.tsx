@@ -20,6 +20,16 @@ export function Header() {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [theme]);
+
   const navItems = [
     { href: "#home", label: t("home") },
     { href: "#about", label: t("about") },
