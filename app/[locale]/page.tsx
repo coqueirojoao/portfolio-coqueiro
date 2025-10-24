@@ -1,5 +1,6 @@
 import { Header } from "@/components/ui/header";
 import { Hero } from "@/components/sections/hero";
+import { TechCarousel } from "@/components/sections/tech-carousel";
 import { About } from "@/components/sections/about";
 import { Skills } from "@/components/sections/skills";
 import { Projects } from "@/components/sections/projects";
@@ -11,6 +12,7 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
+      <TechCarousel />
       <About />
       <Skills />
       <Projects />
