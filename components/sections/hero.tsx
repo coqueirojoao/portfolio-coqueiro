@@ -77,9 +77,9 @@ export function Hero() {
             {t("cta")}
           </a>
           <a
-            href="/resume.pdf"
-            download
-            className="px-8 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl flex items-center gap-2"
+            href="/cv/curriculo.pdf"
+            download="Joao_Pedro_Curriculo.pdf"
+            className="px-8 py-3 bg-transparent border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl flex items-center gap-2"
           >
             <svg
               className="w-5 h-5"
