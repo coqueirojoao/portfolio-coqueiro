@@ -9,7 +9,7 @@ import {
   SiMysql,
   SiJavascript,
   SiTypescript,
-  SiAmazonaws
+  SiAmazon
 } from "react-icons/si";
 
 const technologies = [
@@ -20,7 +20,7 @@ const technologies = [
   { icon: SiMysql, name: "MySQL", color: "#4479A1" },
   { icon: SiJavascript, name: "JavaScript", color: "#F7DF1E" },
   { icon: SiTypescript, name: "TypeScript", color: "#3178C6" },
-  { icon: SiAmazonaws, name: "AWS", color: "#FF9900" },
+  { icon: SiAmazon, name: "AWS", color: "#FF9900" },
 ];
 
 export function TechCarousel() {
