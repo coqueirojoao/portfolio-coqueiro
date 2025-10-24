@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "João Pedro Coqueiro de Azevedo",
+    "role": "Full Stack Developer",
+    "description": "Passionate about code, building modern web and mobile solutions with cutting-edge technologies.",
+    "cta": "Get in Touch",
+    "scrollDown": "Scroll Down"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Who I Am",
+    "description": "Passionate about code, I currently work at the largest hospital in the interior of Bahia, in Vitória da Conquista. I develop mobile and web projects, as well as automation and database development.",
+    "highlights": {
+      "experience": "Specialization in JavaScript, TypeScript, and Node.js",
+      "technologies": "Solid knowledge and projects developed with MySQL, React, Angular, Ionic, and PostgreSQL",
+      "ui": "Experience with CSS libraries and component frameworks such as Bootstrap, Tailwind CSS, Material UI, and Chakra UI",
+      "automation": "Automation and web scraping with Python, Selenium, and JavaScript",
+      "testing": "Automated testing with Jest, Jasmine, Karma, Testing Library, and Cypress",
+      "devops": "Virtualization and container management with Docker and Docker Compose",
+      "soft": "Good communication and proactivity in the work environment"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies I Work With",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "tools": "Tools & Others"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "My Recent Work",
+    "viewProject": "View Project",
+    "viewCode": "View Code"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's Connect",
+    "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "madeWith": "Made with",
+    "by": "by"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  }
+}

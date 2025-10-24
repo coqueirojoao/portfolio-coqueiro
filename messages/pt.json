@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "name": "João Pedro Coqueiro de Azevedo",
+    "role": "Desenvolvedor Full Stack",
+    "description": "Apaixonado por código, construindo soluções web e mobile modernas com tecnologias de ponta.",
+    "cta": "Entre em Contato",
+    "scrollDown": "Role para Baixo"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "subtitle": "Quem Eu Sou",
+    "description": "Apaixonado por código, atualmente trabalho no maior hospital do interior da Bahia, em Vitória da Conquista. Realizo projetos mobile, web, além de automação e desenvolvimento em banco de dados.",
+    "highlights": {
+      "experience": "Especialização com JavaScript, TypeScript e Node.js",
+      "technologies": "Bom conhecimento e projetos desenvolvidos com MySQL, React, Angular, Ionic e PostgreSQL",
+      "ui": "Experiência com o uso de bibliotecas de CSS ou de componentes, como Bootstrap, Tailwind CSS, Material UI e Chakra UI",
+      "automation": "Automação e raspagem de dados com Python, Selenium e JavaScript",
+      "testing": "Testes automatizados com Jest, Jasmine, Karma, Testing Library e Cypress",
+      "devops": "Virtualização e gerenciamento de contêineres com Docker e Docker Compose",
+      "soft": "Boa comunicação e proatividade no ambiente de trabalho"
+    }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Tecnologias que Utilizo",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Banco de Dados",
+      "tools": "Ferramentas e Outros"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Meus Trabalhos Recentes",
+    "viewProject": "Ver Projeto",
+    "viewCode": "Ver Código"
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Vamos Conversar",
+    "description": "Estou sempre aberto para discutir novos projetos, ideias criativas ou oportunidades de fazer parte da sua visão.",
+    "email": "E-mail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "madeWith": "Feito com",
+    "by": "por"
+  },
+  "theme": {
+    "light": "Modo Claro",
+    "dark": "Modo Escuro"
+  }
+}
