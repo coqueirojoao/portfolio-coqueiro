@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { BR, US } from "country-flag-icons/react/3x2";
 
 export function Header() {
   const t = useTranslations("nav");
@@ -77,9 +78,15 @@ export function Header() {
 
             <button
               onClick={toggleLocale}
-              className="px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors font-medium"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              aria-label="Change language"
+              title={currentLocale === "pt" ? "Switch to English" : "Mudar para Português"}
             >
-              {currentLocale === "pt" ? "EN" : "PT"}
+              {currentLocale === "pt" ? (
+                <US className="w-6 h-6" title="English" />
+              ) : (
+                <BR className="w-6 h-6" title="Português" />
+              )}
             </button>
 
             {/* Mobile Menu Button */}
