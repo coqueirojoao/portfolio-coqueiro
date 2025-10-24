@@ -1,4 +1,4 @@
-# Portfolio - João Pedro Coqueiro de Azevedo
+# Portfolio - João Pedro
 
 Personal portfolio website built with modern web technologies.
 
@@ -6,10 +6,11 @@ Personal portfolio website built with modern web technologies.
 
 - **Next.js 16** - React framework with App Router
 - **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
+- **Tailwind CSS v4** - Utility-first CSS framework
 - **Framer Motion** - Animation library
 - **next-intl** - Internationalization (pt-BR and en-US)
 - **next-themes** - Dark mode support
+- **Nodemailer** - Email sending functionality
 
 ## Features
 
@@ -19,6 +20,7 @@ Personal portfolio website built with modern web technologies.
 - ✨ Smooth animations with Framer Motion
 - 📱 Mobile-first approach
 - ⚡ Optimized performance with Next.js 16
+- 📧 Contact form with email functionality
 
 ## Getting Started
 
@@ -27,6 +29,22 @@ First, install the dependencies:
 ```bash
 npm install
 ```
+
+### Configure Email (Required for Contact Form)
+
+1. Copy `.env.example` to `.env.local`:
+   ```bash
+   cp .env.example .env.local
+   ```
+
+2. For Gmail:
+   - Enable "2-Step Verification" on your Google Account
+   - Generate an "App Password" at https://myaccount.google.com/apppasswords
+   - Update `.env.local` with your email and app password:
+   ```
+   SMTP_USER=your-email@gmail.com
+   SMTP_PASS=your-app-password-here
+   ```
 
 Then, run the development server:
 
