@@ -40,3 +40,6 @@ next-env.d.ts
 *.swp
 *.swo
 *~
+
+# CV folder README
+public/cv/README.md
