@@ -8,7 +8,7 @@
   },
   "hero": {
     "greeting": "Hello, I'm",
-    "name": "João Pedro Coqueiro de Azevedo",
+    "name": "João Pedro",
     "role": "Full Stack Developer",
     "description": "Passionate about code, building modern web and mobile solutions with cutting-edge technologies.",
     "cta": "Get in Touch",
@@ -42,7 +42,8 @@
     "title": "Projects",
     "subtitle": "My Recent Work",
     "viewProject": "View Project",
-    "viewCode": "View Code"
+    "viewCode": "View Code",
+    "comingSoon": "New projects coming soon! Stay tuned."
   },
   "contact": {
     "title": "Contact",
@@ -50,7 +51,20 @@
     "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
     "email": "Email",
     "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "github": "GitHub",
+    "form": {
+      "title": "Send a Message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Your message here...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    }
   },
   "footer": {
     "rights": "All rights reserved.",

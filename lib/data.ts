@@ -32,38 +32,10 @@ export const skills: SkillCategory = {
   ],
 };
 
-export const projects: Project[] = [
-  {
-    title: "Hospital Management System",
-    description:
-      "Comprehensive web application for managing hospital operations, patient records, and appointments.",
-    tech: ["React", "Node.js", "PostgreSQL", "Docker"],
-    image: "/projects/hospital.jpg",
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Mobile Health App",
-    description:
-      "Mobile application built with Ionic for patient health tracking and telemedicine consultations.",
-    tech: ["Ionic", "Angular", "TypeScript", "Firebase"],
-    image: "/projects/health-app.jpg",
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Data Automation Tool",
-    description:
-      "Python-based automation tool for web scraping and data processing using Selenium.",
-    tech: ["Python", "Selenium", "Pandas", "MySQL"],
-    image: "/projects/automation.jpg",
-    link: "#",
-    github: "#",
-  },
-];
+export const projects: Project[] = [];
 
 export const socialLinks: SocialLinks = {
-  email: "joao.coqueiro@example.com",
+  email: "azevedo.joao1995@gmail.com",
   linkedin: "https://linkedin.com/in/joaocoqueiro",
   github: "https://github.com/coqueirojoao",
 };
