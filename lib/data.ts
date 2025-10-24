@@ -1,4 +1,6 @@
-export const skills = {
+import type { SkillCategory, Project, SocialLinks } from "@/types";
+
+export const skills: SkillCategory = {
   frontend: [
     { name: "React", level: 90 },
     { name: "Angular", level: 85 },
@@ -30,7 +32,7 @@ export const skills = {
   ],
 };
 
-export const projects = [
+export const projects: Project[] = [
   {
     title: "Hospital Management System",
     description:
@@ -60,7 +62,7 @@ export const projects = [
   },
 ];
 
-export const socialLinks = {
+export const socialLinks: SocialLinks = {
   email: "joao.coqueiro@example.com",
   linkedin: "https://linkedin.com/in/joaocoqueiro",
   github: "https://github.com/coqueirojoao",
