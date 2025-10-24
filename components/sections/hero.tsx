@@ -33,7 +33,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-20 px-4"
+      className="min-h-screen flex items-center justify-center pt-20 px-4 bg-white dark:bg-gray-950"
     >
       <motion.div
         className="container mx-auto text-center"

@@ -22,7 +22,7 @@ export function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="min-h-screen flex items-center justify-center py-20 px-4"
+      className="min-h-screen flex items-center justify-center py-20 px-4 bg-white dark:bg-gray-950"
     >
       <div className="container mx-auto">
         <motion.div
