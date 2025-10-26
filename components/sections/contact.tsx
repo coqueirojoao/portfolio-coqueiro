@@ -6,6 +6,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { socialLinks } from "@/lib/data";
 import { ContactForm } from "@/components/ui/contact-form";
+import { SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
 
 export function Contact() {
   const t = useTranslations("contact");
@@ -14,19 +15,19 @@ export function Contact() {
 
   const contactMethods = [
     {
-      icon: "📧",
+      icon: <SiGmail className="text-red-500" />,
       label: t("email"),
       value: socialLinks.email,
       href: `mailto:${socialLinks.email}`,
     },
     {
-      icon: "💼",
+      icon: <SiLinkedin className="text-blue-600" />,
       label: t("linkedin"),
       value: "LinkedIn Profile",
       href: socialLinks.linkedin,
     },
     {
-      icon: "💻",
+      icon: <SiGithub className="text-gray-800" />,
       label: t("github"),
       value: "GitHub Profile",
       href: socialLinks.github,
