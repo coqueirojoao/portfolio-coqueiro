@@ -6,7 +6,8 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { socialLinks } from "@/lib/data";
 import { ContactForm } from "@/components/ui/contact-form";
-import { SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
+import { SiLinkedin, SiGithub } from "react-icons/si";
+import { GmailIcon } from "@/components/ui/gmail-icon";
 
 export function Contact() {
   const t = useTranslations("contact");
@@ -15,7 +16,7 @@ export function Contact() {
 
   const contactMethods = [
     {
-      icon: <SiGmail className="text-red-500" />,
+      icon: <GmailIcon className="w-10 h-10" />,
       label: t("email"),
       value: socialLinks.email,
       href: `mailto:${socialLinks.email}`,
