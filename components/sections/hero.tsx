@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { TypingEffect } from "@/components/ui/typing-effect";
+import { MatrixRain } from "@/components/ui/matrix-rain";
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -34,10 +35,11 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-20 px-4 bg-white"
+      className="min-h-screen flex items-center justify-center pt-20 px-4 bg-white relative overflow-hidden"
     >
+      <MatrixRain />
       <motion.div
-        className="container mx-auto text-center"
+        className="container mx-auto text-center relative z-10"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
