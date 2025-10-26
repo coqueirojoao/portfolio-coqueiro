@@ -22,7 +22,7 @@ export function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="min-h-screen flex items-center justify-center py-20 px-4 bg-white dark:bg-gray-950"
+      className="min-h-screen flex items-center justify-center py-20 px-4 bg-white"
     >
       <div className="container mx-auto">
         <motion.div
@@ -31,10 +31,10 @@ export function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
             {t("title")}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
+          <p className="text-lg text-gray-600">
             {t("subtitle")}
           </p>
         </motion.div>
@@ -46,9 +46,9 @@ export function Skills() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
             >
-              <h3 className="text-xl font-bold mb-6 text-center text-blue-600 dark:text-blue-400">
+              <h3 className="text-xl font-bold mb-6 text-center text-blue-600">
                 {t(`categories.${category.key}`)}
               </h3>
 
@@ -56,14 +56,14 @@ export function Skills() {
                 {category.data.map((skill, skillIndex) => (
                   <div key={skill.name}>
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      <span className="text-sm font-medium text-gray-700">
                         {skill.name}
                       </span>
-                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                      <span className="text-xs text-gray-500">
                         {skill.level}%
                       </span>
                     </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                    <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         animate={
@@ -74,7 +74,7 @@ export function Skills() {
                           delay: categoryIndex * 0.1 + skillIndex * 0.05,
                           ease: "easeOut",
                         }}
-                        className="h-full bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 rounded-full"
+                        className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"
                       />
                     </div>
                   </div>

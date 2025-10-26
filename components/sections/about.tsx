@@ -24,7 +24,7 @@ export function About() {
     <section
       id="about"
       ref={ref}
-      className="min-h-screen flex items-center justify-center py-20 px-4 bg-gray-50 dark:bg-gray-900"
+      className="min-h-screen flex items-center justify-center py-20 px-4 bg-gray-50"
     >
       <div className="container mx-auto">
         <motion.div
@@ -33,10 +33,10 @@ export function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
             {t("title")}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
+          <p className="text-lg text-gray-600">
             {t("subtitle")}
           </p>
         </motion.div>
@@ -46,9 +46,9 @@ export function About() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12 mb-8"
+            className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-8"
           >
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
               {t("description")}
             </p>
           </motion.div>
@@ -69,11 +69,11 @@ export function About() {
                     : { opacity: 0, x: index % 2 === 0 ? -20 : 20 }
                 }
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+                className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-600 dark:bg-blue-400" />
-                  <p className="ml-4 text-gray-700 dark:text-gray-300">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-600" />
+                  <p className="ml-4 text-gray-700">
                     {highlight}
                   </p>
                 </div>

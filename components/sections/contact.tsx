@@ -37,7 +37,7 @@ export function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="min-h-screen flex items-center justify-center py-20 px-4 bg-white dark:bg-gray-950"
+      className="min-h-screen flex items-center justify-center py-20 px-4 bg-white"
     >
       <div className="container mx-auto max-w-6xl">
         <motion.div
@@ -46,13 +46,13 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
             {t("title")}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">
+          <p className="text-lg text-gray-600 mb-4">
             {t("subtitle")}
           </p>
-          <p className="text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
             {t("description")}
           </p>
         </motion.div>
@@ -69,16 +69,16 @@ export function Contact() {
                   initial={{ opacity: 0, x: -30 }}
                   animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all hover:-translate-y-1 group flex items-center gap-4"
+                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all hover:-translate-y-1 group flex items-center gap-4"
                 >
                   <div className="text-4xl group-hover:scale-110 transition-transform">
                     {method.icon}
                   </div>
                   <div className="text-left">
-                    <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">
+                    <h3 className="text-lg font-bold text-gray-800">
                       {method.label}
                     </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 break-words">
+                    <p className="text-sm text-gray-600 break-words">
                       {method.value}
                     </p>
                   </div>

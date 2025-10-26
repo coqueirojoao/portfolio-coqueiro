@@ -63,9 +63,9 @@ export function ContactForm() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       onSubmit={handleSubmit}
-      className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8"
+      className="bg-white rounded-xl shadow-lg p-8"
     >
-      <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100">
+      <h3 className="text-2xl font-bold mb-6 text-gray-800">
         {t("title")}
       </h3>
 
@@ -73,7 +73,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+            className="block text-sm font-medium text-gray-700 mb-2"
           >
             {t("name")}
           </label>
@@ -85,14 +85,14 @@ export function ContactForm() {
             onChange={handleChange}
             placeholder={t("namePlaceholder")}
             required
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600:ring-blue-400"
           />
         </div>
 
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+            className="block text-sm font-medium text-gray-700 mb-2"
           >
             {t("email")}
           </label>
@@ -104,14 +104,14 @@ export function ContactForm() {
             onChange={handleChange}
             placeholder={t("emailPlaceholder")}
             required
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600:ring-blue-400"
           />
         </div>
 
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+            className="block text-sm font-medium text-gray-700 mb-2"
           >
             {t("message")}
           </label>
@@ -123,14 +123,14 @@ export function ContactForm() {
             placeholder={t("messagePlaceholder")}
             required
             rows={6}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 resize-none"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600:ring-blue-400 resize-none"
           />
         </div>
 
         <button
           type="submit"
           disabled={status === "loading"}
-          className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700:bg-blue-600 text-white rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === "loading" ? t("sending") : t("send")}
         </button>
@@ -139,7 +139,7 @@ export function ContactForm() {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg text-center"
+            className="p-4 bg-green-100 text-green-700 rounded-lg text-center"
           >
             {t("success")}
           </motion.div>
@@ -149,7 +149,7 @@ export function ContactForm() {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="p-4 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 rounded-lg text-center"
+            className="p-4 bg-red-100 text-red-700 rounded-lg text-center"
           >
             {t("error")}
           </motion.div>
