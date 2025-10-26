@@ -6,8 +6,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { socialLinks } from "@/lib/data";
 import { ContactForm } from "@/components/ui/contact-form";
-import { SiLinkedin, SiGithub } from "react-icons/si";
-import { GmailIcon } from "@/components/ui/gmail-icon";
+import { SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
 
 export function Contact() {
   const t = useTranslations("contact");
@@ -16,10 +15,11 @@ export function Contact() {
 
   const contactMethods = [
     {
-      icon: <GmailIcon className="w-10 h-10" />,
+      icon: <SiGmail />,
       label: t("email"),
       value: socialLinks.email,
       href: `mailto:${socialLinks.email}`,
+      color: "#EA4335",
     },
     {
       icon: <SiLinkedin className="text-blue-600" />,
@@ -73,7 +73,10 @@ export function Contact() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all hover:-translate-y-1 group flex items-center gap-4"
                 >
-                  <div className="text-4xl group-hover:scale-110 transition-transform">
+                  <div
+                    className="text-4xl group-hover:scale-110 transition-transform"
+                    style={method.color ? { color: method.color } : undefined}
+                  >
                     {method.icon}
                   </div>
                   <div className="text-left">
