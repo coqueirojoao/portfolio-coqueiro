@@ -46,7 +46,12 @@ export function Hero() {
           variants={itemVariants}
           className="text-lg md:text-xl text-gray-600 mb-2"
         >
-          <TypingEffect text={t("greeting")} speed={80} />
+          <TypingEffect
+            text={t("greeting")}
+            typingSpeed={80}
+            deletingSpeed={50}
+            pauseDuration={2000}
+          />
         </motion.p>
 
         <motion.h1
