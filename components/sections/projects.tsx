@@ -1,17 +1,122 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { projects } from "@/lib/data";
-import Image from "next/image";
+import { ChevronDown, ChevronUp } from "lucide-react";
+
+interface ProjectCardProps {
+  project: (typeof projects)[0];
+  index: number;
+  isInView: boolean;
+}
+
+function ProjectCard({ project, index, isInView }: ProjectCardProps) {
+  const t = useTranslations();
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all"
+    >
+      <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
+        {project.image && !imageError ? (
+          <img
+            src={project.image}
+            alt={t(project.titleKey)}
+            className="absolute inset-0 w-full h-full object-cover"
+            onError={() => {
+              setImageError(true);
+            }}
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-6xl opacity-20">💻</div>
+          </div>
+        )}
+      </div>
+
+      <div className="p-6">
+        <h3 className="text-xl font-bold mb-3 text-gray-800">
+          {t(project.titleKey)}
+        </h3>
+
+        <div className="mb-4">
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={isExpanded ? "expanded" : "collapsed"}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className={`text-gray-600 ${!isExpanded ? "line-clamp-3" : ""}`}
+            >
+              {t(project.descriptionKey)}
+            </motion.p>
+          </AnimatePresence>
+
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="mt-2 flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors"
+          >
+            {isExpanded ? (
+              <>
+                {t("projects.showLess")}
+                <ChevronUp className="w-4 h-4" />
+              </>
+            ) : (
+              <>
+                {t("projects.showMore")}
+                <ChevronDown className="w-4 h-4" />
+              </>
+            )}
+          </button>
+        </div>
+
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.tech.map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 text-xs font-medium bg-blue-100 text-blue-600 rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex gap-4">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
+          >
+            {t("projects.viewProject")}
+          </a>
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 text-center px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg text-sm font-medium transition-colors"
+          >
+            {t("projects.viewCode")}
+          </a>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 export function Projects() {
   const t = useTranslations();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
 
   return (
     <section
@@ -37,72 +142,12 @@ export function Projects() {
         {projects.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {projects.map((project, index) => (
-              <motion.div
+              <ProjectCard
                 key={project.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2"
-              >
-                <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600">
-                  {project.image && !imageErrors[project.id] ? (
-                    <Image
-                      src={project.image}
-                      alt={t(project.titleKey)}
-                      fill
-                      className="object-cover"
-                      unoptimized
-                      onError={() => {
-                        setImageErrors(prev => ({ ...prev, [project.id]: true }));
-                      }}
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-6xl opacity-20">💻</div>
-                    </div>
-                  )}
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-800">
-                    {t(project.titleKey)}
-                  </h3>
-
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {t(project.descriptionKey)}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-xs font-medium bg-blue-100 text-blue-600 rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-4">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
-                    >
-                      {t("projects.viewProject")}
-                    </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 text-center px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg text-sm font-medium transition-colors"
-                    >
-                      {t("projects.viewCode")}
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
+                project={project}
+                index={index}
+                isInView={isInView}
+              />
             ))}
           </div>
         ) : (
