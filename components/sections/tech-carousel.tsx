@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import {
   SiReact,
   SiAngular,
@@ -24,6 +25,8 @@ const technologies = [
 ];
 
 export function TechCarousel() {
+  const t = useTranslations("skills");
+
   return (
     <section className="py-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4 mb-8">
@@ -33,7 +36,7 @@ export function TechCarousel() {
           viewport={{ once: true }}
           className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12"
         >
-          Tecnologias que utilizo
+          {t("subtitle")}
         </motion.h3>
       </div>
 
