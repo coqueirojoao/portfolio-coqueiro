@@ -39,7 +39,7 @@ export const projects: Project[] = [
     descriptionKey: "projects.list.analyticsDashboard.description",
     tech: ["Next.js 16", "TypeScript", "MongoDB", "Recharts", "Tailwind CSS"],
     image: "/projects/dashboard-screenshot.png",
-    link: "https://dashboard-analytics.vercel.app",
+    link: "https://dashboard-analytics-flax.vercel.app",
     github: "https://github.com/coqueirojoao/dashboard-analytics"
   }
 ];

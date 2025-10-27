@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { projects } from "@/lib/data";
 import Image from "next/image";
 
@@ -11,6 +11,7 @@ export function Projects() {
   const t = useTranslations();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
 
   return (
     <section
@@ -44,12 +45,16 @@ export function Projects() {
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2"
               >
                 <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600">
-                  {project.image ? (
+                  {project.image && !imageErrors[project.id] ? (
                     <Image
                       src={project.image}
                       alt={t(project.titleKey)}
                       fill
                       className="object-cover"
+                      unoptimized
+                      onError={() => {
+                        setImageErrors(prev => ({ ...prev, [project.id]: true }));
+                      }}
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
