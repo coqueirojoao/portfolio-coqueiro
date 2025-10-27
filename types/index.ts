@@ -8,8 +8,9 @@ export interface SkillCategory {
 }
 
 export interface Project {
-  title: string;
-  description: string;
+  id: string;
+  titleKey: string;
+  descriptionKey: string;
   tech: string[];
   image: string;
   link: string;

@@ -8,7 +8,7 @@ import { projects } from "@/lib/data";
 import Image from "next/image";
 
 export function Projects() {
-  const t = useTranslations("projects");
+  const t = useTranslations();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -26,10 +26,10 @@ export function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
-            {t("title")}
+            {t("projects.title")}
           </h2>
           <p className="text-lg text-gray-600">
-            {t("subtitle")}
+            {t("projects.subtitle")}
           </p>
         </motion.div>
 
@@ -37,25 +37,34 @@ export function Projects() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {projects.map((project, index) => (
               <motion.div
-                key={project.title}
+                key={project.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2"
               >
                 <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-6xl opacity-20">💻</div>
-                  </div>
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={t(project.titleKey)}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-6xl opacity-20">💻</div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3 text-gray-800">
-                    {project.title}
+                    {t(project.titleKey)}
                   </h3>
 
                   <p className="text-gray-600 mb-4 line-clamp-3">
-                    {project.description}
+                    {t(project.descriptionKey)}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -74,17 +83,17 @@ export function Projects() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors"
+                      className="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
                     >
-                      {t("viewProject")}
+                      {t("projects.viewProject")}
                     </a>
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 text-center px-4 py-2 bg-gray-200 hover:bg-gray-300:bg-gray-600 text-gray-800 rounded-lg text-sm font-medium transition-colors"
+                      className="flex-1 text-center px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg text-sm font-medium transition-colors"
                     >
-                      {t("viewCode")}
+                      {t("projects.viewCode")}
                     </a>
                   </div>
                 </div>
@@ -100,7 +109,7 @@ export function Projects() {
           >
             <div className="text-6xl mb-4">🚀</div>
             <p className="text-lg text-gray-600">
-              {t("comingSoon")}
+              {t("projects.comingSoon")}
             </p>
           </motion.div>
         )}

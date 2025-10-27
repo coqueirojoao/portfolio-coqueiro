@@ -44,7 +44,13 @@
     "subtitle": "My Recent Work",
     "viewProject": "View Project",
     "viewCode": "View Code",
-    "comingSoon": "New projects coming soon! Stay tuned."
+    "comingSoon": "New projects coming soon! Stay tuned.",
+    "list": {
+      "analyticsDashboard": {
+        "title": "Analytics Dashboard",
+        "description": "Full-stack dashboard with interactive data visualization using Next.js 16, TypeScript, MongoDB Atlas, and Recharts. Features real-time metrics, responsive charts, dark mode, and REST API integration."
+      }
+    }
   },
   "contact": {
     "title": "Contact",

@@ -32,7 +32,17 @@ export const skills: SkillCategory = {
   ],
 };
 
-export const projects: Project[] = [];
+export const projects: Project[] = [
+  {
+    id: "analyticsDashboard",
+    titleKey: "projects.list.analyticsDashboard.title",
+    descriptionKey: "projects.list.analyticsDashboard.description",
+    tech: ["Next.js 16", "TypeScript", "MongoDB", "Recharts", "Tailwind CSS"],
+    image: "/projects/dashboard-screenshot.png",
+    link: "https://dashboard-analytics.vercel.app",
+    github: "https://github.com/coqueirojoao/dashboard-analytics"
+  }
+];
 
 export const socialLinks: SocialLinks = {
   email: "azevedo.joao1995@gmail.com",

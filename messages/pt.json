@@ -44,7 +44,13 @@
     "subtitle": "Meus Trabalhos Recentes",
     "viewProject": "Ver Projeto",
     "viewCode": "Ver Código",
-    "comingSoon": "Novos projetos em breve! Fique atento."
+    "comingSoon": "Novos projetos em breve! Fique atento.",
+    "list": {
+      "analyticsDashboard": {
+        "title": "Dashboard Analytics",
+        "description": "Dashboard full-stack com visualização interativa de dados usando Next.js 16, TypeScript, MongoDB Atlas e Recharts. Possui métricas em tempo real, gráficos responsivos, dark mode e integração com API REST."
+      }
+    }
   },
   "contact": {
     "title": "Contato",
