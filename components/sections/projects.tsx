@@ -18,6 +18,11 @@ function ProjectCard({ project, index, isInView }: ProjectCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
+  // Get absolute path for image to work with i18n routes
+  const imageSrc = project.image
+    ? (typeof window !== 'undefined' ? `${window.location.origin}${project.image}` : project.image)
+    : '';
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -28,7 +33,7 @@ function ProjectCard({ project, index, isInView }: ProjectCardProps) {
       <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
         {project.image && !imageError ? (
           <img
-            src={project.image}
+            src={imageSrc}
             alt={t(project.titleKey)}
             className="absolute inset-0 w-full h-full object-cover"
             onError={() => {
