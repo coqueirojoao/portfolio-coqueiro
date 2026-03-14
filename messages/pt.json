@@ -51,6 +51,14 @@
       "analyticsDashboard": {
         "title": "Dashboard Analytics",
         "description": "Dashboard full-stack com visualização interativa de dados usando Next.js 16, TypeScript, MongoDB Atlas e Recharts. Possui métricas em tempo real, gráficos responsivos, dark mode e integração com API REST."
+      },
+      "brewhaus": {
+        "title": "Brewhaus — Café Specialty",
+        "description": "Loja de café specialty com dark mode premium, construída com React 18, TypeScript e Vite. Possui catálogo com busca, filtros por categoria, paginação, favoritos com persistência em localStorage e páginas de detalhe com produtos relacionados."
+      },
+      "alyplusChallenge": {
+        "title": "Aly+ API de Gestão de Usuários",
+        "description": "API REST para gestão de usuários e autenticação construída com Spring Boot 4, Java 17 e PostgreSQL. Possui autenticação JWT, controle de acesso por roles (ADMIN/USER), migrations com Flyway, documentação Swagger e 100% de cobertura de testes com JUnit 5 e Mockito."
       }
     }
   },

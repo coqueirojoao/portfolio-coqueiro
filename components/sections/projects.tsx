@@ -79,19 +79,21 @@ function ProjectCard({ project, index, isInView }: ProjectCardProps) {
         </div>
 
         <div className="flex gap-4">
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
-          >
-            {t("projects.viewProject")}
-          </a>
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
+            >
+              {t("projects.viewProject")}
+            </a>
+          )}
           <a
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 text-center px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg text-sm font-medium transition-colors"
+            className={`flex-1 text-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${project.link ? "bg-gray-200 hover:bg-gray-300 text-gray-800" : "bg-blue-600 hover:bg-blue-700 text-white"}`}
           >
             {t("projects.viewCode")}
           </a>

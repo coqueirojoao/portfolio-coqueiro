@@ -41,6 +41,24 @@ export const projects: Project[] = [
     image: "",
     link: "https://dashboard-analytics-flax.vercel.app",
     github: "https://github.com/coqueirojoao/dashboard-analytics"
+  },
+  {
+    id: "brewhaus",
+    titleKey: "projects.list.brewhaus.title",
+    descriptionKey: "projects.list.brewhaus.description",
+    tech: ["React 18", "TypeScript", "React Router", "Lucide React", "CSS"],
+    image: "",
+    link: "https://brewhaus-delta.vercel.app",
+    github: "https://github.com/coqueirojoao/brewhaus"
+  },
+  {
+    id: "alyplusChallenge",
+    titleKey: "projects.list.alyplusChallenge.title",
+    descriptionKey: "projects.list.alyplusChallenge.description",
+    tech: ["Spring Boot", "Java 17", "PostgreSQL", "JWT", "Docker", "JUnit 5"],
+    image: "",
+    link: "",
+    github: "https://github.com/coqueirojoao/alyplus_challenge"
   }
 ];
 
